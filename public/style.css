@@ -1,0 +1,43 @@
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: white;
+}
+h1, h2, p{
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+    color: black;
+}
+
+form {
+    text-align: center;
+    color: black;
+}
+
+#input-button {
+    border-radius: 4px;
+    background-color: #008CBA;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#snack-contain {
+    text-align: center;
+    color: black;
+}
+
+.snack-info {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #d8ecf7;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
+    margin-top: 10px;
+}
