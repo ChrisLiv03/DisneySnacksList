@@ -1,9 +1,10 @@
 body {
     font-family: Tahoma, Verdana, sans-serif;
-    background-color: white;
+    background: #D8ECF7;
+    background: linear-gradient(90deg, rgba(216, 236, 247, 1) 0%, rgba(47, 119, 167, 0.6) 50%, rgba(216, 236, 247, 1) 100%);
 }
 h1, h2, p{
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: Tahoma, sans-serif;
     text-align: center;
     color: black;
 }
@@ -15,13 +16,12 @@ form {
 
 #input-button {
     border-radius: 4px;
-    background-color: #008CBA;
+    background-color:#f2c641;
 }
 
 ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -29,10 +29,15 @@ ul {
 #snack-contain {
     text-align: center;
     color: black;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .snack-info {
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
     background-color: #d8ecf7;
     width: 300px;
     border: 2px solid black;
@@ -40,4 +45,53 @@ ul {
     margin-bottom: 10px;
     padding: 3px;
     margin-top: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(10,10vw);
+    grid-gap: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip:hover .flip-in{
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-back {
+    background-color: black;
+    transform: rotateY(180deg);
+}
+
+.card-info {
+    color: white;
 }

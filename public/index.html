@@ -8,22 +8,69 @@
 </head>
 
 <body>
+    
     <div id="snack-contain">
 
         <div id="header">
             <h1>Snacks to Eat</h1>
         </div>
 
+        <div class="gallery" id="gallery">
+            <div class="gallery-item">
+            <div class="flip">
+                <div class="flip-in">
+                    <div class="flip-front">
+                        <img class="gallery-item" src="images/millionaire.jpg" alt="Millionaire Shortbread">
+                    </div>
+                        <div class="flip-back">
+                            <p class="card-info">Disney Springs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+            <div class="flip">
+                <div class="flip-in">
+                    <div class="flip-front">
+                        <img class="gallery-item" src="images/FriesQueso.jpg" alt="Fries with Queso">
+                    </div>
+                        <div class="flip-back">
+                            <p class="card-info">Disney Springs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+            <div class="flip">
+                <div class="flip-in">
+                    <div class="flip-front">
+                        <img class="gallery-item" src="images/millionaire.jpg" alt="Millionaire Shortbread">
+                    </div>
+                        <div class="flip-back">
+                            <p class="card-info">Disney Springs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="snack-form">
             <input
                 type="text"
-                class="input-item"
-                name="input_box"
-                id="input-box"
+                class="snack-item"
+                name="snack_box"
+                id="snack-box"
+            />
+            <input
+                type="text"
+                class="loc-item"
+                name="loc_box"
+                id="loc-box"
             />
             <button id="input-button" onclick="addSnack()">Add Snack</button>
         </div>
-        <h2>Snack List</h2>
         <ul id="list-contain"></ul>
     </div>
     <script type="text/javascript" src="script.js"></script>

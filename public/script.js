@@ -1,30 +1,31 @@
-const inputBox = document.getElementById("input-box");
+const snackBox = document.getElementById("snack-box");
+const locBox = document.getElementById("loc-box")
 const listContain = document.getElementById("list-contain");
 
 function addSnack() {
-    const snack = inputBox.value.trim()
-    if (!snack) {
-        alert("Please enter snack");
+    const snack = snackBox.value.trim()
+    const loc = locBox.value.trim()
+    if (!snack || !loc) {
+        alert("Please enter snack/location");
         return;
     }
-    const li = document.createElement("li");
+    const gallery = document.getElementById("gallery");
+    const card = document.createElement("div");
+    card.className = "gallery-item";
 
-    li.innerHTML= `
-    <label>
-        <button class="snack-info">${snack}</button>
-    </label>
+    card.innerHTML= `
+        <div class="flip">
+            <div class="flip-in">
+                <div class="flip-front">
+                    <p class="card-info">${snack}</p>
+                </div>
+                <div class="flip-back">
+                    <p class="card-info">${loc}</p>
+                </div>
+            </div>
+        </div>
     `;
-
-    const button = li.querySelector(".snack-info");
-    button.addEventListener("click", () => {
-        snackInfo(snack);
-    })
-
-    listContain.appendChild(li);
-    inputBox.value='';
-}
-
-function snackInfo(snack) {
-    const url = `https://www.google.com/search?q=${encodeURIComponent(snack)}`;
-    window.open(url, "_blank");
+    gallery.appendChild(card);
+    snackBox.value='';
+    locBox.value='';
 }
